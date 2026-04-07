@@ -5,7 +5,11 @@ const tiers = [
     name: "Basis",
     price: "9,90",
     discount: "15%",
-    features: ["15% Rabatt bei allen Partnern", "Digitale Mitgliedskarte", "Sofort einsetzbar"],
+    features: [
+      "15% Rabatt bei allen Partnern",
+      "Digitale Mitgliedskarte",
+      "Sofort einsetzbar",
+    ],
   },
   {
     name: "Plus",
@@ -16,6 +20,8 @@ const tiers = [
       "20% Rabatt bei allen Partnern",
       "Digitale + NFC-Karte",
       "Familie teilen (2 Personen)",
+      "Fastpass: Vorrang beim Bäcker & Co.",
+      "Exklusive Partner-Angebote",
     ],
   },
   {
@@ -26,6 +32,9 @@ const tiers = [
       "25% Rabatt bei allen Partnern",
       "Digitale + NFC-Karte",
       "Familie teilen (4 Personen)",
+      "Fastpass: Vorrang bei allen Partnern",
+      "Priority-Vorbestellung & Reservierung",
+      "VIP-Zugang zu Dorf-Events",
       "Dorffonds-Stimmrecht",
     ],
   },
@@ -181,6 +190,85 @@ export default function Home() {
                 >
                   Jetzt starten
                 </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Bonus Perks */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 className="text-center text-3xl font-bold text-stone-900">Bonus-Vorteile</h2>
+          <p className="mt-3 text-center text-stone-500">
+            Mehr als nur Rabatt — exklusive Vorteile für Plus- und Dorf-Mitglieder
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                ),
+                title: "Fastpass",
+                desc: "Vorrang an der Theke beim Bäcker, Metzger & Co. Kein Anstehen in der Schlange.",
+                tier: "Plus",
+              },
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                ),
+                title: "Vorbestellung",
+                desc: "Brot, Fleisch oder Kuchen vorbestellen und ohne Wartezeit abholen.",
+                tier: "Dorf",
+              },
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg>
+                ),
+                title: "VIP-Events",
+                desc: "Exklusiver Zugang zu Dorf-Veranstaltungen, Verkostungen und Saisonmärkten.",
+                tier: "Dorf",
+              },
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                ),
+                title: "Geburtstags-Bonus",
+                desc: "Extra 10% Rabatt im Geburtstagsmonat — auf alles, bei allen Partnern.",
+                tier: "Plus",
+              },
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+                ),
+                title: "Freunde werben",
+                desc: "Empfiehl Ortskasse weiter und erhalte einen Monat gratis pro geworbenes Mitglied.",
+                tier: "Basis",
+              },
+              {
+                icon: (
+                  <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>
+                ),
+                title: "Saisonale Specials",
+                desc: "Exklusive Saison-Aktionen: Adventkalender, Sommerfest-Deals, Erntedank-Rabatte.",
+                tier: "Plus",
+              },
+            ].map((perk) => (
+              <div key={perk.title} className="rounded-2xl border-2 border-stone-200 bg-stone-50 p-6 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-700 text-white">
+                    {perk.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-stone-900">{perk.title}</h3>
+                    <span className={`text-xs font-bold ${
+                      perk.tier === "Basis" ? "text-stone-500" : perk.tier === "Plus" ? "text-emerald-600" : "text-amber-600"
+                    }`}>
+                      ab {perk.tier}
+                    </span>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm text-stone-600">{perk.desc}</p>
               </div>
             ))}
           </div>
