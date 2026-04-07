@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - "3010:3000"
+      - "3020:3000"
     environment:
       - DATABASE_URL=postgresql://ortskasse:ortskasse@db:5432/ortskasse?schema=public
       - MOLLIE_API_KEY=${MOLLIE_API_KEY}
@@ -39,7 +39,7 @@ services:
       DATABASE_URL: postgresql://ortskasse:ortskasse@db:5432/umami
       DATABASE_TYPE: postgresql
     ports:
-      - "3011:3000"
+      - "3021:3000"
     depends_on:
       db:
         condition: service_healthy
