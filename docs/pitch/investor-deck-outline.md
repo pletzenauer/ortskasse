@@ -1,7 +1,7 @@
-# Ortskasse — Investor Pitch Deck Outline
+# Heimvorteil — Investor Pitch Deck Outline
 
 ## Slide 1: Title
-**Ortskasse — Netflix für dein Dorf**
+**Heimvorteil — Netflix für dein Dorf**
 Subscription-based local commerce membership for DACH villages
 
 ## Slide 2: Problem

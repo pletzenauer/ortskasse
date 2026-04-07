@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
             customerId: payment.customerId,
             amount: { currency: "EUR", value: priceMap[tier] || "9.90" },
             interval: "1 month",
-            description: `Ortskasse ${tier}`,
+            description: `Heimvorteil ${tier}`,
             webhookUrl: process.env.MOLLIE_WEBHOOK_URL!,
             metadata: { email, tier, name, villageId },
           });

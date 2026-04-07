@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# Ortskasse
+# Heimvorteil
 
 ## Project
 Subscription-based "buy local" membership platform for DACH villages. Residents pay 9.90-24.90/month for 15-25% discounts at all local businesses.

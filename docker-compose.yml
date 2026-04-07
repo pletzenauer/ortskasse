@@ -4,13 +4,13 @@ services:
     ports:
       - "3020:3000"
     environment:
-      - DATABASE_URL=postgresql://ortskasse:ortskasse@db:5432/ortskasse?schema=public
+      - DATABASE_URL=postgresql://heimvorteil:heimvorteil@db:5432/heimvorteil?schema=public
       - MOLLIE_API_KEY=${MOLLIE_API_KEY}
       - MOLLIE_WEBHOOK_URL=${MOLLIE_WEBHOOK_URL}
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
       - NEXTAUTH_URL=${NEXTAUTH_URL}
       - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
-      - NEXT_PUBLIC_APP_NAME=Ortskasse
+      - NEXT_PUBLIC_APP_NAME=Heimvorteil
     depends_on:
       db:
         condition: service_healthy
@@ -19,15 +19,15 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: ortskasse
-      POSTGRES_PASSWORD: ortskasse
-      POSTGRES_DB: ortskasse
+      POSTGRES_USER: heimvorteil
+      POSTGRES_PASSWORD: heimvorteil
+      POSTGRES_DB: heimvorteil
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5440:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ortskasse"]
+      test: ["CMD-SHELL", "pg_isready -U heimvorteil"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -36,7 +36,7 @@ services:
   umami:
     image: ghcr.io/umami-software/umami:postgresql-latest
     environment:
-      DATABASE_URL: postgresql://ortskasse:ortskasse@db:5432/umami
+      DATABASE_URL: postgresql://heimvorteil:heimvorteil@db:5432/umami
       DATABASE_TYPE: postgresql
     ports:
       - "3021:3000"

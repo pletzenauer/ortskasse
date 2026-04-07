@@ -43,11 +43,11 @@ async function main() {
 
   // Create a demo subscriber (for testing checkout)
   await prisma.subscriber.upsert({
-    where: { email: "demo@ortskasse.at" },
+    where: { email: "demo@heimvorteil.at" },
     update: {},
     create: {
       villageId: village.id,
-      email: "demo@ortskasse.at",
+      email: "demo@heimvorteil.at",
       name: "Maria Mustermann",
       tier: "PLUS",
       status: "ACTIVE",

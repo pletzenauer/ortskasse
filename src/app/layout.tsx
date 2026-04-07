@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ortskasse — Dein Abo fürs lokale Einkaufen",
+  title: "Heimvorteil — Dein Abo fürs lokale Einkaufen",
   description:
     "Spare 15-25% bei allen Geschäften in deinem Ort. Einfach Karte zeigen, sparen.",
 };

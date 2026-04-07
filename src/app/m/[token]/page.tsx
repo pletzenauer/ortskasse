@@ -25,7 +25,7 @@ export default async function MemberPage({
       <div className="w-full max-w-sm text-center">
         <div className="rounded-3xl bg-white/10 p-8 backdrop-blur-sm">
           <div className="text-5xl mb-4">✅</div>
-          <h1 className="text-2xl font-bold">Ortskasse-Mitglied</h1>
+          <h1 className="text-2xl font-bold">Heimvorteil-Mitglied</h1>
           <div className="mt-6 space-y-2">
             <p className="text-lg font-semibold">{subscriber.name}</p>
             <p className="text-emerald-200">{subscriber.village.name}</p>

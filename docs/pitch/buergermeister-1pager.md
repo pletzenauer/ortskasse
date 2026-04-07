@@ -1,10 +1,10 @@
-# Ortskasse — Das Abo fürs lokale Einkaufen
+# Heimvorteil — Das Abo fürs lokale Einkaufen
 
 ## Das Problem
 Immer mehr Geld fließt aus unseren Orten ab — an Online-Händler und Supermarktketten. Lokale Geschäfte verlieren Stammkunden, der Ortskern verliert an Lebendigkeit.
 
-## Die Lösung: Ortskasse
-Ortskasse ist ein digitales Monatsabo für Bewohner. Für 9,90-24,90 pro Monat bekommen Mitglieder **15-25% Rabatt bei allen teilnehmenden Geschäften** im Ort — vom Bäcker bis zum Installateur.
+## Die Lösung: Heimvorteil
+Heimvorteil ist ein digitales Monatsabo für Bewohner. Für 9,90-24,90 pro Monat bekommen Mitglieder **15-25% Rabatt bei allen teilnehmenden Geschäften** im Ort — vom Bäcker bis zum Installateur.
 
 **Kein Gutschein. Kein Punktesammeln. Einfach Karte zeigen, sparen.**
 
@@ -22,7 +22,7 @@ Ortskasse ist ein digitales Monatsabo für Bewohner. Für 9,90-24,90 pro Monat b
 - **Positive Presse**: "Unser Ort geht neue Wege" — ein konkretes Projekt für den Ortskern
 
 ## Was kostet es die Gemeinde?
-**Nichts.** Ortskasse finanziert sich über die Mitgliedsbeiträge der Bewohner. Die Gemeinde erhält nur Einnahmen, keine Kosten.
+**Nichts.** Heimvorteil finanziert sich über die Mitgliedsbeiträge der Bewohner. Die Gemeinde erhält nur Einnahmen, keine Kosten.
 
 ## Was kostet es die Betriebe?
 **Nichts.** Kein Beitrag, keine Gebühr. Betriebe geben den vereinbarten Rabatt (15-25%) und bekommen dafür mehr Stammkunden.
@@ -47,4 +47,4 @@ Ortskasse ist ein digitales Monatsabo für Bewohner. Für 9,90-24,90 pro Monat b
 
 ## Kontakt
 [Name] · [E-Mail] · [Telefon]
-ortskasse.at
+heimvorteil.at

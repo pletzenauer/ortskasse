@@ -88,7 +88,7 @@ export default function KassePage() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-stone-900 p-6 text-white">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-emerald-400">Ortskasse</h1>
+          <h1 className="text-2xl font-bold text-emerald-400">Heimvorteil</h1>
           <p className="text-sm text-stone-400">Kasse</p>
         </div>
 

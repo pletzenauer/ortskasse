@@ -98,7 +98,7 @@ function RegistrationForm() {
       <div className="bg-emerald-900 px-6 py-4">
         <div className="mx-auto max-w-5xl">
           <Link href="/" className="text-lg font-bold text-white">
-            Ortskasse
+            Heimvorteil
           </Link>
         </div>
       </div>
@@ -108,7 +108,7 @@ function RegistrationForm() {
         <div className="bg-white px-6 py-12 lg:px-12 lg:py-16">
           <h1 className="text-3xl font-bold text-stone-900">Mitglied werden</h1>
           <p className="mt-2 text-stone-500">
-            Wähle dein Abo und spare sofort bei allen Ortskasse-Partnern.
+            Wähle dein Abo und spare sofort bei allen Heimvorteil-Partnern.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
@@ -236,7 +236,7 @@ function RegistrationForm() {
           <div className="mt-8 space-y-4">
             <div className="rounded-xl border border-emerald-700 bg-emerald-800/30 p-5">
               <p className="text-sm italic text-emerald-200">
-                &ldquo;Seit ich Ortskasse habe, kaufe ich fast nur noch im Ort ein. Das spart richtig Geld!&rdquo;
+                &ldquo;Seit ich Heimvorteil habe, kaufe ich fast nur noch im Ort ein. Das spart richtig Geld!&rdquo;
               </p>
               <p className="mt-2 text-xs font-medium text-emerald-400">— Maria M., Plus-Mitglied</p>
             </div>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Ortskasse investor pitch deck as PowerPoint."""
+"""Generate Heimvorteil investor pitch deck as PowerPoint."""
 
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
@@ -55,10 +55,10 @@ def add_bullet_list(slide, left, top, width, height, items, font_size=16, color=
 # ========== SLIDE 1: Title ==========
 slide = prs.slides.add_slide(prs.slide_layouts[6])  # blank
 add_bg(slide, EMERALD_DARK)
-add_text_box(slide, 1.5, 1.5, 10, 1.5, "ORTSKASSE", 60, True, WHITE, PP_ALIGN.LEFT)
+add_text_box(slide, 1.5, 1.5, 10, 1.5, "HEIMVORTEIL", 60, True, WHITE, PP_ALIGN.LEFT)
 add_text_box(slide, 1.5, 3.2, 10, 1, "Netflix für dein Dorf", 36, False, RGBColor(0x6E, 0xE7, 0xB7), PP_ALIGN.LEFT)
 add_text_box(slide, 1.5, 4.5, 10, 1, "Subscription-based local commerce membership\nfor DACH villages", 20, False, RGBColor(0xA7, 0xF3, 0xD0), PP_ALIGN.LEFT)
-add_text_box(slide, 1.5, 6.2, 10, 0.5, "ortskasse.at", 16, False, RGBColor(0xA7, 0xF3, 0xD0), PP_ALIGN.LEFT)
+add_text_box(slide, 1.5, 6.2, 10, 0.5, "heimvorteil.at", 16, False, RGBColor(0xA7, 0xF3, 0xD0), PP_ALIGN.LEFT)
 
 # ========== SLIDE 2: Problem ==========
 slide = prs.slides.add_slide(prs.slide_layouts[6])
@@ -75,7 +75,7 @@ add_bullet_list(slide, 1.5, 2.0, 10, 5, [
 # ========== SLIDE 3: Solution ==========
 slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, WHITE)
-add_text_box(slide, 1.5, 0.8, 10, 0.8, "Die Lösung: Ortskasse", 40, True, EMERALD_DARK)
+add_text_box(slide, 1.5, 0.8, 10, 0.8, "Die Lösung: Heimvorteil", 40, True, EMERALD_DARK)
 add_bullet_list(slide, 1.5, 2.0, 10, 5, [
     "Monatsabo (€9,90–24,90) = sofort 15–25% Rabatt bei ALLEN lokalen Geschäften",
     "Keine Gutscheine, keine Punkte — Karte scannen, sparen",
@@ -107,7 +107,7 @@ add_bullet_list(slide, 1.5, 2.7, 5, 2, [
 ], 18)
 add_text_box(slide, 1.5, 4.5, 5, 0.5, "Revenue Split", 22, True, DARK)
 add_bullet_list(slide, 1.5, 5.2, 5, 2, [
-    "70% → Plattform (Ortskasse)",
+    "70% → Plattform (Heimvorteil)",
     "20% → Gemeinde",
     "10% → Dorffonds",
 ], 18)
@@ -124,7 +124,7 @@ slide = prs.slides.add_slide(prs.slide_layouts[6])
 add_bg(slide, EMERALD_DARK)
 add_text_box(slide, 1.5, 0.8, 10, 0.8, "So funktioniert's", 40, True, WHITE)
 add_text_box(slide, 1.5, 2.5, 3, 0.5, "1. Abo wählen", 28, True, RGBColor(0x6E, 0xE7, 0xB7))
-add_text_box(slide, 1.5, 3.2, 3, 1, "Bewohner wählen online ihr Ortskasse-Abo ab €9,90/Monat", 16, False, RGBColor(0xA7, 0xF3, 0xD0))
+add_text_box(slide, 1.5, 3.2, 3, 1, "Bewohner wählen online ihr Heimvorteil-Abo ab €9,90/Monat", 16, False, RGBColor(0xA7, 0xF3, 0xD0))
 add_text_box(slide, 5.5, 2.5, 3, 0.5, "2. Karte zeigen", 28, True, RGBColor(0x6E, 0xE7, 0xB7))
 add_text_box(slide, 5.5, 3.2, 3, 1, "QR-Code am Handy oder NFC-Karte beim Einkaufen vorzeigen", 16, False, RGBColor(0xA7, 0xF3, 0xD0))
 add_text_box(slide, 9.5, 2.5, 3, 0.5, "3. Sofort sparen", 28, True, RGBColor(0x6E, 0xE7, 0xB7))
@@ -178,7 +178,7 @@ add_bullet_list(slide, 1.5, 2.0, 10, 5, [
     "Dorffonds = emotionales Argument für Bürgermeister und Bewohner",
 ], 20)
 add_text_box(slide, 1.5, 5.5, 10, 1.5,
-    "Ortskasse  vs  Dorftaler (3-5% Bonus, Papier)  vs  Payback (0,5% Punkte)  vs  Groupon (einmalig, 50%+ Marge)",
+    "Heimvorteil  vs  Dorftaler (3-5% Bonus, Papier)  vs  Payback (0,5% Punkte)  vs  Groupon (einmalig, 50%+ Marge)",
     16, False, GRAY, PP_ALIGN.CENTER)
 
 # ========== SLIDE 10: Team ==========
@@ -222,10 +222,10 @@ add_bullet_list(slide, 2.5, 3.8, 8, 2.5, [
     "20% Operations (Hosting, Legal, Admin)",
 ], 20, RGBColor(0xA7, 0xF3, 0xD0))
 add_text_box(slide, 1.5, 5.8, 10, 0.5, "Ziel: 5-Dorf-Modell in 12 Monaten beweisen", 22, True, WHITE, PP_ALIGN.CENTER)
-add_text_box(slide, 1.5, 6.5, 10, 0.5, "ortskasse.at · [name]@ortskasse.at", 16, False, RGBColor(0xA7, 0xF3, 0xD0), PP_ALIGN.CENTER)
+add_text_box(slide, 1.5, 6.5, 10, 0.5, "heimvorteil.at · [name]@heimvorteil.at", 16, False, RGBColor(0xA7, 0xF3, 0xD0), PP_ALIGN.CENTER)
 
 # Save
 output_dir = "/Users/martin_pletzenauer/villagelalternative/docs/pitch"
-pptx_path = os.path.join(output_dir, "Ortskasse-Investor-Pitch.pptx")
+pptx_path = os.path.join(output_dir, "Heimvorteil-Investor-Pitch.pptx")
 prs.save(pptx_path)
 print(f"Saved: {pptx_path}")

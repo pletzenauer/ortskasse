@@ -44,7 +44,7 @@ const steps = [
   {
     num: "1",
     title: "Abo wählen",
-    desc: "Wähle dein Ortskasse-Abo ab 9,90 pro Monat.",
+    desc: "Wähle dein Heimvorteil-Abo ab 9,90 pro Monat.",
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
@@ -242,7 +242,7 @@ export default function Home() {
                   <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
                 ),
                 title: "Freunde werben",
-                desc: "Empfiehl Ortskasse weiter und erhalte einen Monat gratis pro geworbenes Mitglied.",
+                desc: "Empfiehl Heimvorteil weiter und erhalte einen Monat gratis pro geworbenes Mitglied.",
                 tier: "Basis",
               },
               {
@@ -283,7 +283,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold">Für Betriebe</h2>
               <p className="mt-4 text-lg text-emerald-100">
                 Kostenlos teilnehmen. Kein Beitrag, keine Gebühr. Sie geben
-                Ortskasse-Mitgliedern einen Rabatt — dafür kommen garantiert mehr
+                Heimvorteil-Mitgliedern einen Rabatt — dafür kommen garantiert mehr
                 Kunden zu Ihnen statt zum Supermarkt.
               </p>
               <Link
@@ -296,8 +296,8 @@ export default function Home() {
             <ul className="space-y-4">
               {[
                 "Keine Kosten, keine Gebühren",
-                "Wöchentlicher Bericht über Ortskasse-Kunden",
-                "\u201eOrtskasse Partner\u201c-Badge für Ihr Geschäft",
+                "Wöchentlicher Bericht über Heimvorteil-Kunden",
+                "\u201eHeimvorteil Partner\u201c-Badge für Ihr Geschäft",
                 "Mehr Stammkunden, mehr Umsatz",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 rounded-xl border border-emerald-600 bg-emerald-700/50 px-5 py-4 text-emerald-50">
@@ -318,7 +318,7 @@ export default function Home() {
           </div>
           <h2 className="text-3xl font-bold text-stone-900">Der Dorffonds</h2>
           <p className="mt-4 text-lg text-stone-600">
-            10% jedes Ortskasse-Abos fließen in den Dorffonds — für
+            10% jedes Heimvorteil-Abos fließen in den Dorffonds — für
             Veranstaltungen, Verschönerung und Projekte in deinem Ort. Du
             entscheidest mit, wofür das Geld verwendet wird.
           </p>
@@ -328,7 +328,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-stone-700 bg-stone-900 py-10">
         <div className="mx-auto max-w-5xl px-6 text-center text-sm text-stone-400">
-          <p>&copy; {new Date().getFullYear()} Ortskasse. Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} Heimvorteil. Alle Rechte vorbehalten.</p>
           <div className="mt-3 flex justify-center gap-6">
             <Link href="/impressum" className="transition hover:text-white">Impressum</Link>
             <Link href="/datenschutz" className="transition hover:text-white">Datenschutz</Link>

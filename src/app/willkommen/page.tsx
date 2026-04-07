@@ -5,10 +5,10 @@ export default function WillkommenPage() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-emerald-700 to-emerald-900 p-6 text-white">
       <div className="w-full max-w-md text-center">
         <div className="text-6xl mb-6">🎉</div>
-        <h1 className="text-3xl font-bold">Willkommen bei Ortskasse!</h1>
+        <h1 className="text-3xl font-bold">Willkommen bei Heimvorteil!</h1>
         <p className="mt-4 text-lg text-emerald-100">
           Deine Mitgliedschaft ist jetzt aktiv. Du kannst sofort bei allen
-          Ortskasse-Partnern sparen.
+          Heimvorteil-Partnern sparen.
         </p>
         <div className="mt-8 rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
           <h2 className="font-semibold text-emerald-200">So geht&apos;s weiter:</h2>
