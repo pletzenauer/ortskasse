@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum SubscriptionTier {
+  BASIS
+  PLUS
+  DORF
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELLED
+  PAST_DUE
+  PENDING
+}
+
+model Village {
+  id          String       @id @default(cuid())
+  name        String
+  slug        String       @unique
+  description String?
+  residents   Int?
+  imageUrl    String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  businesses  Business[]
+  subscribers Subscriber[]
+}
+
+model Business {
+  id           String        @id @default(cuid())
+  villageId    String
+  name         String
+  category     String
+  description  String?
+  address      String?
+  phone        String?
+  email        String?
+  discountPct  Int           @default(20)
+  imageUrl     String?
+  contactName  String?
+  isActive     Boolean       @default(true)
+  pinCode      String?       // 4-digit PIN for checkout verification
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  village      Village       @relation(fields: [villageId], references: [id])
+  transactions Transaction[]
+
+  @@index([villageId])
+}
+
+model Subscriber {
+  id               String             @id @default(cuid())
+  villageId        String
+  email            String             @unique
+  name             String
+  phone            String?
+  token            String             @unique @default(cuid()) // QR/NFC verification token
+  tier             SubscriptionTier   @default(BASIS)
+  status           SubscriptionStatus @default(PENDING)
+  mollieCustomerId String?
+  mollieSubId      String?
+  nfcCardSent      Boolean            @default(false)
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+
+  village          Village            @relation(fields: [villageId], references: [id])
+  transactions     Transaction[]
+
+  @@index([villageId])
+  @@index([token])
+}
+
+model Transaction {
+  id             String     @id @default(cuid())
+  subscriberId   String
+  businessId     String
+  originalAmount Decimal    @db.Decimal(10, 2)
+  discountPct    Int
+  discountAmount Decimal    @db.Decimal(10, 2)
+  finalAmount    Decimal    @db.Decimal(10, 2)
+  createdAt      DateTime   @default(now())
+
+  subscriber     Subscriber @relation(fields: [subscriberId], references: [id])
+  business       Business   @relation(fields: [businessId], references: [id])
+
+  @@index([subscriberId])
+  @@index([businessId])
+  @@index([createdAt])
+}
