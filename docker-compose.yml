@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - "3020:3000"
+      - "3040:3000"
     environment:
       - DATABASE_URL=postgresql://heimvorteil:heimvorteil@db:5432/heimvorteil?schema=public
       - MOLLIE_API_KEY=${MOLLIE_API_KEY}
@@ -39,7 +39,7 @@ services:
       DATABASE_URL: postgresql://heimvorteil:heimvorteil@db:5432/umami
       DATABASE_TYPE: postgresql
     ports:
-      - "3021:3000"
+      - "3041:3000"
     depends_on:
       db:
         condition: service_healthy
